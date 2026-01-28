@@ -1,7 +1,7 @@
 public class nextPermutation {
     
     void nextpermutation(int[] arr) {
-        // code here
+        
         int i = arr.length - 2;
         while(i>=0 && arr[i]>=arr[i+1]){
             i--;
