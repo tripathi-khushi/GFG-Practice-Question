@@ -1,0 +1,54 @@
+public class setZeros {
+    
+    public void setMatrixZeroes(int[][] mat) {
+        // code here
+        int n = mat.length;
+        int m = mat[0].length;
+        
+        boolean firstRowZero = false;
+        boolean firstColumnZero = false;
+        
+        for(int i = 0; i < n; i++){
+            if(mat[i][0]==0){
+                firstColumnZero = true;
+            }
+        }
+        
+        for(int j = 0; j < m; j++){
+            if(mat[0][j]==0){
+                firstRowZero = true;
+            }
+        }
+        
+        for(int i = 1; i < n; i++){
+            for(int j = 1; j < m; j++){
+                if(mat[i][j]==0){
+                    mat[i][0] = 0;
+                    mat[0][j] = 0;
+                }
+            }
+        }
+        
+        for(int i = 1; i < n; i++){
+            for(int j = 1; j < m; j++){
+                if(mat[i][0] == 0 || mat[0][j] == 0){
+                    mat[i][j] = 0;
+                }
+            }
+        }
+        
+        if(firstColumnZero){
+            for(int i = 0; i < n; i++){
+                mat[i][0] = 0;
+                
+            }
+        }
+        
+        if(firstRowZero){
+            for(int j = 0; j < m; j++){
+                mat[0][j] = 0;
+            }
+        }
+    }
+
+}
