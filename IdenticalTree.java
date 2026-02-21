@@ -1,5 +1,5 @@
 public class IdenticalTree {
-    /*
+    
 class Node{
     int data;
     Node left, right;
@@ -8,7 +8,7 @@ class Node{
         left=right=null;
     }
 }
-*/
+
 
 
     public boolean isIdentical(Node r1, Node r2) {
